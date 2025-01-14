@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 00:20:25 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 21:48:38 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/09 20:42:40 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 /**
  * rrb - Performs a reverse rotate operation on stack_b.
  * @stack_b: Pointer to the head of stack_b.
- * 
- * This function takes the last element of stack_b and moves it to the front. 
+ *
+ * This function takes the last element of stack_b and moves it to the front.
  * If stack_b is empty or has only one element, it returns NULL.
- * 
+ *
  * Return: Pointer to the updated stack_b.
  */
 
@@ -48,10 +48,10 @@ t_node	**rrb(t_node **stack_b)
 /**
  * rra - Performs a reverse rotate operation on stack_a.
  * @stack_a: Pointer to the head of stack_a.
- * 
+ *
  * This function takes the last element of stack_a and moves it to the front.
  * If stack_a is empty or has only one element, it returns NULL.
- * 
+ *
  * Return: Pointer to the updated stack_a.
  */
 
@@ -83,12 +83,14 @@ t_node	**rra(t_node **stack_a)
  * @stack_b: Pointer to the head of stack_b.
  * @last: Pointer to the last node in stack_b.
  * @second_last: Pointer to the second last node in stack_b.
- * 
+ *
  * This function moves the last element of stack_b to the front, similar to rrb.
  */
 
 static void	rrr_util(t_node **stack_b, t_node *last, t_node *second_last)
 {
+	if (*stack_b == NULL || (*stack_b)->next == NULL)
+        return;
 	last = *stack_b;
 	second_last = NULL;
 	while (last->next != NULL)
@@ -107,8 +109,8 @@ static void	rrr_util(t_node **stack_b, t_node *last, t_node *second_last)
  * rrr - Performs a reverse rotate operation on both stacks.
  * @stack_a: Pointer to the head of stack_a.
  * @stack_b: Pointer to the head of stack_b.
- * 
- * This function moves the last element of both stacks to the front. If both 
+ *
+ * This function moves the last element of both stacks to the front. If both
  * stacks are empty or have only one element, it does nothing.
  */
 

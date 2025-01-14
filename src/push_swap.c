@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 01:07:14 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 18:55:21 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/09 18:50:54 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 /**
  * free_split - Frees the memory allocated for a split string array.
  * @split_argv: Pointer to the split string array to be freed.
- * 
- * This function iterates through the split string array and frees each 
+ *
+ * This function iterates through the split string array and frees each
  * allocated string, followed by freeing the array itself.
  */
 
@@ -39,11 +39,11 @@ void	free_split(char **split_argv)
  * @argc: Argument count from the command line.
  * @argv: Argument values from the command line.
  * @stack_a: Pointer to the head of stack_a where values will be added.
- * 
- * This function handles both single and multiple command line arguments. 
- * If there is a single argument, it splits the argument string into separate 
+ *
+ * This function handles both single and multiple command line arguments.
+ * If there is a single argument, it splits the argument string into separate
  * values, otherwise, it directly uses the arguments.
- * 
+ *
  * Return: Pointer to the head of stack_a.
  */
 
@@ -77,9 +77,9 @@ static t_node	*parse_arguments(int argc, char *argv[], t_node **stack_a)
  * main - Entry point of the program.
  * @argc: Argument count from the command line.
  * @argv: Argument values from the command line.
- * 
- * This function initializes the stacks, parses the arguments, checks for 
- * duplicates, and then executes the push_swap algorithm, followed by clearing 
+ *
+ * This function initializes the stacks, parses the arguments, checks for
+ * duplicates, and then executes the push_swap algorithm, followed by clearing
  * the memory used for the stacks.
  */
 

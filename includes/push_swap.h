@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:26:34 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 14:50:00 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/09 19:24:40 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-/**======================================================================= Libraries =======================================================================**/
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -22,7 +21,6 @@
 # include "errors.h"
 # include "libft.h"
 
-/**====================================================================== Structures ======================================================================**/
 typedef struct node
 {
 	int				data;
@@ -79,13 +77,8 @@ typedef struct t_stacks
 	t_cheap		*cheap;
 }	t_stacks;
 
-/**====================================================================== Prototypes ====================================================================== **/
-
-/*------------------------------------------------------------------- Functions Prototype -------------------------------------------------------------------*/
 int								str_to_int(const char *str);
 char							**ft_split(const char *str, char c);
-
-/*------------------------------------------------------------------- Operations on Stacks -------------------------------------------------------------------*/
 void							sa(t_node **stack_a);
 void							sb(t_node **stack_b);
 void							ss(t_node **stack_a, t_node **stack_b);
@@ -97,17 +90,11 @@ void							rr(t_node **stack_a, t_node **stack_b);
 t_node							**rra(t_node **stack_a);
 t_node							**rrb(t_node **stack_b);
 void							rrr(t_node **rra, t_node **rrb);
-
-/*--------------------------------------------------------------- Stack Management Functions ---------------------------------------------------------------*/
 void							*clear_list(t_node **head);
 t_node							*add_node(t_node **head, int data);
-
-/*------------------------------------------------------------------- Sorting Functions -------------------------------------------------------------------*/
 void							sort_three(t_node **stack_a);
 void							sort_five(t_node **stack_a, t_node **stack_b);
 bool							is_sorted(t_node **stack_a);
-
-/* ------------------------------------------------------------------- Stack Operations -------------------------------------------------------------------*/
 void							push_swap(t_stacks *stack);
 void							cheapest_move(t_stacks *stack);
 void							check_max_and_min_in_b(t_stacks *stack);

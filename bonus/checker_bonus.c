@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:48:40 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/09 13:34:46 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/09 19:38:46 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
  * execute_operations - Executes a given operation on the stacks.
  * @stack: Pointer to the t_stacks structure containing the stacks.
  * @operations: String representing the operation to execute.
- * 
- * This function compares the operations string with predefined commands 
- * and executes the corresponding stack operation. If the operation is 
- * unrecognized, it calls free_operations to handle errors and free 
+ *
+ * This function compares the operations string with predefined commands
+ * and executes the corresponding stack operation. If the operation is
+ * unrecognized, it calls free_operations to handle errors and free
  * resources.
  */
 
@@ -54,10 +54,10 @@ void	execute_operations(t_stacks *stack, char *operations)
 /**
  * get_commands - Reads commands from standard input and executes them.
  * @stack: Pointer to the t_stacks structure containing the stacks.
- * 
- * This function continuously reads operations from standard input using 
- * get_next_line. For each operation, it calls execute_operations to 
- * perform the corresponding action on the stacks. After all operations, 
+ *
+ * This function continuously reads operations from standard input using
+ * get_next_line. For each operation, it calls execute_operations to
+ * perform the corresponding action on the stacks. After all operations,
  * it checks if stack_a is sorted and prints "OK" or "KO".
  */
 
@@ -83,8 +83,8 @@ void	get_commands(t_stacks *stack, int visual)
 /**
  * free_split - Frees the memory allocated for a split array of strings.
  * @split_argv: Array of strings to free.
- * 
- * This function iterates through the array, freeing each string, 
+ *
+ * This function iterates through the array, freeing each string,
  * and finally frees the array itself to prevent memory leaks.
  */
 
@@ -106,12 +106,12 @@ void	free_split(char **split_argv)
  * @argc: Argument count.
  * @argv: Argument vector.
  * @stack_a: Pointer to the head of stack_a.
- * 
- * This function checks if there are multiple arguments or a single one 
- * that needs to be split. It converts the argument(s) to integers 
- * and adds them as nodes to stack_a. If splitting is done, it frees 
+ *
+ * This function checks if there are multiple arguments or a single one
+ * that needs to be split. It converts the argument(s) to integers
+ * and adds them as nodes to stack_a. If splitting is done, it frees
  * the split array after use.
- * 
+ *
  * Return: Pointer to the head of stack_a.
  */
 
@@ -145,12 +145,12 @@ static t_node	*parse_arguments(int argc, char *argv[], t_node **stack_a)
  * main - Entry point of the program.
  * @argc: Argument count.
  * @argv: Argument vector.
- * 
+ *
  * This function initializes the stacks, checks for errors in input,
- * parses the arguments into stack_a, and processes the commands 
- * from standard input. It also handles cleanup at the end to free 
+ * parses the arguments into stack_a, and processes the commands
+ * from standard input. It also handles cleanup at the end to free
  * allocated resources.
- * 
+ *
  * Return: 0 on success.
  */
 
@@ -169,5 +169,7 @@ int	main(int argc, char **argv)
 		clear_list(&stacks.stack_a);
 	check_duplicates_list(stacks.stack_a);
 	get_commands(&stacks, visual);
+	clear_list(&stacks.stack_a);
+	clear_list(&stacks.stack_b);
 	clear_all(&stacks);
 }
