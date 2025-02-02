@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:31:06 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 21:17:31 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:20:24 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ t_node	**rra(t_node **stack_a)
 
 static void	rrr_util(t_node **stack_b, t_node *last, t_node *second_last)
 {
-	if (len_of_stack(stack_b) <=1)
+	if (*stack_b == NULL || (*stack_b)->next == NULL)
 		return ;
 	last = *stack_b;
 	second_last = NULL;
@@ -100,7 +100,7 @@ static void	rrr_util(t_node **stack_b, t_node *last, t_node *second_last)
 	(*stack_b)->prev = last;
 	*stack_b = last;
 	(*stack_b)->prev = NULL;
-	stack_b = &last;
+	second_last->next = NULL;
 }
 
 /**
@@ -134,3 +134,4 @@ void	rrr(t_node **stack_a, t_node **stack_b)
 	second_last->next = NULL;
 	rrr_util(stack_b, last, second_last);
 }
+

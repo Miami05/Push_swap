@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 01:01:12 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 18:58:18 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/20 22:23:02 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include "libft.h"
 
 void							clear_all(t_stacks *stack);
-void							free_operations(t_stacks *stack, char *operations);
+void							free_operations(t_stacks *stack,
+									char *operations);
 t_node							*add_node(t_node **head, int data);
 void							*clear_list(t_node **head);
 void							sa(t_node **stack_a);
@@ -33,6 +34,7 @@ t_node							**rra(t_node **stack_a);
 t_node							**rrb(t_node **stack_b);
 void							rrr(t_node **stack_a, t_node **stack_b);
 void							print_stack(t_stacks *stack);
-int								check_visual(int *argc, char **argv, int visual);
+int								check_visual(int *argc,
+									char **argv, int visual);
 
 #endif

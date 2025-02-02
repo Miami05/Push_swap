@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 00:20:25 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 20:42:40 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:03:37 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ t_node	**rra(t_node **stack_a)
 static void	rrr_util(t_node **stack_b, t_node *last, t_node *second_last)
 {
 	if (*stack_b == NULL || (*stack_b)->next == NULL)
-        return;
+		return ;
 	last = *stack_b;
 	second_last = NULL;
 	while (last->next != NULL)

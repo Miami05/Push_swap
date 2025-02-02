@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 14:41:39 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 18:51:01 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:58:57 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,8 @@ long	ft_atol(const char *str)
  * @s1: First string to compare.
  * @s2: Second string to compare.
  *
- * Return: The difference between the two strings at the first mismatched character.
+ * Return: The difference between the two
+ * strings at the first mismatched character.
  */
 
 int	ft_strcmp(const char *s1, const char *s2)

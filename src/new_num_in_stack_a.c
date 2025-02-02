@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   new_num_in_stack_a.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 22:01:22 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 18:53:51 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:57:39 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /**
- * search_new_num - Searches for the next number in stack_a that is larger than the current number.
+ * search_new_num -Searches for the next number in stack_a that
+ * is larger than the current number.
  * @stack: Pointer to the main stacks structure containing stack_a.
  * @number: The current number to be incremented and searched.
- * 
- * This function increments the number and searches stack_a for that number, 
+ *
+ * This function increments the number and searches stack_a for that number,
  * returning it once found.
- * 
+ *
  * Return: The next number found in stack_a.
  */
 
@@ -49,10 +50,11 @@ int	search_new_num(t_stacks *stack, int number)
 }
 
 /**
- * move_elem_stack_a - Executes the moves to bring the element from stack_b to stack_a.
+ * move_elem_stack_a -
+ * Executes the moves to bring the element from stack_b to stack_a.
  * @stack: Pointer to the main stacks structure containing stack_a and stack_b.
- * 
- * This function applies the calculated rotation moves to stack_a, 
+ *
+ * This function applies the calculated rotation moves to stack_a,
  * followed by moving the top element of stack_b to stack_a.
  */
 
@@ -69,9 +71,10 @@ void	move_elem_stack_a(t_stacks *stack)
  * new_num_in_stack_a - Prepares to move a new number from stack_b to stack_a.
  * @stack: Pointer to the main stacks structure containing stack_a and stack_b.
  * @stack_b: Pointer to the head node of stack_b.
- * 
- * This function calculates how to bring a newly identified number from stack_b 
- * to stack_a, considering the necessary rotations based on the index of that number.
+ *
+ * This function calculates how to bring a newly identified number from stack_b
+ * to stack_a,
+ * considering the necessary rotations based on the index of that number.
  */
 
 void	new_num_in_stack_a(t_stacks *stack, t_node *stack_b)

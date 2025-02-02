@@ -3,22 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   find_cheapest_move.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 17:18:36 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 18:49:34 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:56:19 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /**
- * do_cheapest_move - Executes the series of moves stored in the cheapest move structure
- * @stack: Pointer to the main stacks structure containing stack_a, stack_b, and move details
- * 
- * This function performs the cheapest moves calculated earlier in the program. It reduces 
- * the counter in the `cheap` structure as it executes each corresponding operation (e.g., 
- * ra, rb, rra, rrb, etc.). The moves are executed in a specific order to transfer elements 
+ * do_cheapest_move -
+ * Executes the series of moves stored in the cheapest move structure
+ * @stack: Pointer to the main stacks structure containing stack_a,
+ * stack_b, and move details
+ *
+ * This function performs the cheapest moves calculated earlier in the program.
+ * It reduces the counter in the `cheap` structure as
+ * it executes each corresponding operation (e.g.,
+ * ra, rb, rra, rrb, etc.).
+ * The moves are executed in a specific order to transfer elements
  * between stack_a and stack_b efficiently.
  */
 
@@ -42,11 +46,15 @@ void	do_cheapest_move(t_stacks *stack)
 
 /**
  * cheapest_move - Finds and executes the cheapest move from stack_a to stack_b
- * @stack: Pointer to the main stacks structure containing stack_a, stack_b, and move details
- * 
- * This function allocates memory for moves, cheapest moves, and values structures.
- * It then repeatedly calculates the cheapest moves, executes them, and updates the stack
- * until only three elements are left in stack_a. It calls helper functions to perform
+ * @stack: Pointer to the main stacks structure containing
+ * stack_a, stack_b, and move details
+ *
+ * This function allocates memory for moves,
+ * cheapest moves, and values structures.
+ * It then repeatedly calculates the cheapest moves, executes them,
+ * and updates the stack
+ * until only three elements are left in stack_a.
+ * It calls helper functions to perform
  * various operations like checking max/min values and calculating moves.
  */
 
@@ -71,14 +79,17 @@ void	cheapest_move(t_stacks *stack)
 }
 
 /**
- * search_new_num_in_stack_b - Finds the closest number in stack_b smaller than the input number
+ * search_new_num_in_stack_b -
+ * Finds the closest number in stack_b smaller than the input number
  * @stack: Pointer to the main stacks structure containing stack_b
  * @num: The target number to find in stack_b
- * 
- * This function searches for the number closest to but smaller than the input number in stack_b.
- * It decreases the number step by step and scans stack_b until the number is found. If the number 
- * is found, it returns that number.
- * 
+ *
+ * This function searches for the number closest
+ * to but smaller than the input number in stack_b.
+ * It decreases the number step by step and scans stack_b
+ * until the number is found. If the number is found,
+ * it returns that number.
+ *
  * Return: The closest smaller number found in stack_b.
  */
 
@@ -112,11 +123,13 @@ int	search_new_num_in_stack_b(t_stacks *stack, int num)
  * find_index_stack_b - Finds the index of the target value in stack_b
  * @stack: Pointer to the main stacks structure containing stack_b
  * @target_value: The value to search for in stack_b
- * 
- * This function searches for a specific target value in stack_b and returns the index
- * (position) of that value. It traverses stack_b from the beginning, checking each node's
+ *
+ * This function searches for a
+ * specific target value in stack_b and returns the index
+ * (position) of that value.
+ * It traverses stack_b from the beginning, checking each node's
  * data until it finds the target value.
- * 
+ *
  * Return: The index of the target value in stack_b.
  */
 

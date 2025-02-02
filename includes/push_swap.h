@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:26:34 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 19:24:40 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:53:39 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,17 +98,21 @@ bool							is_sorted(t_node **stack_a);
 void							push_swap(t_stacks *stack);
 void							cheapest_move(t_stacks *stack);
 void							check_max_and_min_in_b(t_stacks *stack);
-void							get_element_top_stack_a(t_stacks *stack, t_node *head, int i);
+void							get_element_top_stack_a(t_stacks *stack,
+									t_node *head, int i);
 void							new_min_or_max_stack_b(t_stacks *stack);
-int								find_index_stack_b(t_stacks *stack, int target_value);
+int								find_index_stack_b(t_stacks *stack,
+									int target_value);
 void							check_cheapest_moves(t_stacks *stack);
 void							new_num_in_stack_b(t_stacks *stack, int num);
-int								search_new_num_in_stack_b(t_stacks *stack, int num);
+int								search_new_num_in_stack_b(t_stacks *stack,
+									int num);
 void							push_to_a(t_stacks *stack);
 void							check_max_and_min_in_a(t_stacks *stack);
 int								find_index_stack_a(t_stacks *stack, int nbr);
 void							new_max_num_in_a(t_stacks *stack);
 void							new_min_num_in_a(t_stacks *stack);
-void							new_num_in_stack_a(t_stacks *stack, t_node *stack_b);
+void							new_num_in_stack_a(t_stacks *stack,
+									t_node *stack_b);
 
 #endif

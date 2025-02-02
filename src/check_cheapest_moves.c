@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_cheapest_moves.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:16:27 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 18:40:35 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:54:28 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,14 @@ void	check_cost(t_stacks *stack, int i)
 }
 
 /**
- * check_double_moves - Reduces redundant moves by combining rotations and reverse rotations
+ * check_double_moves - Reduces redundant moves by
+ * combining rotations and reverse rotations
  * @stack: Pointer to the stack structure containing the moves
  *
  * This function optimizes the move sequence by combining rotation operations
  * (`ra` and `rb` into `rr`) and reverse rotation operations (`rra` and `rrb`
- * into `rrr`). If both `ra` and `rb` are non-zero, the number of common rotations
+ * into `rrr`).
+ * If both `ra` and `rb` are non-zero, the number of common rotations
  * is stored in `rr`, and the same logic is applied for reverse rotations.
  */
 

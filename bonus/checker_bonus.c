@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:48:40 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 19:38:46 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/20 22:54:17 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 /**
  * execute_operations - Executes a given operation on the stacks.
  * @stack: Pointer to the t_stacks structure containing the stacks.
- * @operations: String representing the operation to execute.
+ * @operations: String representing the
+ * operation to execute.
  *
  * This function compares the operations string with predefined commands
  * and executes the corresponding stack operation. If the operation is
@@ -74,14 +75,16 @@ void	get_commands(t_stacks *stack, int visual)
 		free(operations);
 		operations = get_next_line(STDIN_FILENO);
 	}
-	if (is_sorted(&stack->stack_a) && len_of_stack(&stack->stack_b) == 0)
+	if (is_sorted(&stack->stack_a)
+		&& len_of_stack(&stack->stack_b) == 0)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");
 }
 
 /**
- * free_split - Frees the memory allocated for a split array of strings.
+ * free_split - Frees the memory allocated
+ * for a split array of strings.
  * @split_argv: Array of strings to free.
  *
  * This function iterates through the array, freeing each string,

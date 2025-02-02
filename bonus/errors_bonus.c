@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:47:28 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/09 02:28:10 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:49:42 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
  * check_integer_size - Checks if integers are within valid range
  * @argc: The number of command-line arguments
  * @argv: Array of argument strings
- * 
+ *
  * This function iterates through all the arguments, converts them to long
  * integers using the ft_atol function, and checks if they fall within the
  * valid range of an integer (`INT_MIN` to `INT_MAX`). If any number is out
  * of range, it triggers an error message and exits the program.
- * 
+ *
  * Return: 0 if all integers are within range, otherwise the function exits.
  */
 
@@ -43,7 +43,7 @@ int	check_integer_size(int argc, char **argv)
 
 /**
  * error_message - Prints an error message and exits the program
- * 
+ *
  * This function prints "Error\n" to the standard error output (`stderr`)
  * and then exits the program with a status code of 0. It is called whenever
  * an invalid argument or out-of-range integer is detected.
@@ -59,7 +59,7 @@ void	error_message(void)
  * error - Validates arguments and triggers an error if necessary
  * @argc: The number of command-line arguments
  * @argv: Array of argument strings
- * 
+ *
  * This function checks if the number of arguments is valid and verifies
  * that all arguments are integers within the valid range. If any of these
  * checks fail, it calls `error_message()` to print an error and exit.
@@ -75,12 +75,14 @@ void	error(int argc, char **argv)
 /**
  * is_sorted - Checks if the stack is sorted in ascending order
  * @stack_a: Double pointer to the head of the stack
- * 
+ *
  * This function checks if the linked list (stack) is sorted in ascending order.
- * It iterates through the list, comparing each node's data with the next one.
- * If any node has a value greater than the next node, it returns `false`, meaning
- * the list is not sorted. If the list is empty or sorted, it returns `true`.
- * 
+ * It iterates through the list,
+ * comparing each node's data with the next one.
+ * If any node has a value greater than the next node,
+ * it returns `false`, meaning the list is not sorted.
+ * If the list is empty or sorted, it returns `true`.
+ *
  * Return: `true` if the list is sorted or empty, `false` otherwise.
  */
 

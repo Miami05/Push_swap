@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_verbose_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:17:34 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/09 13:34:16 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:48:50 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
  * print_height - Prints elements from both stack_a and stack_b up to max_count.
  * @stack: Pointer to the t_stacks structure containing the stacks.
  * @max_count: Maximum number of lines to print (height of the taller stack).
- * @current_a: Pointer to the current node in stack_a (starts as NULL, initialized inside).
- * 
+ * @current_a:
+ * Pointer to the current node in stack_a (starts as NULL, initialized inside).
+ *
  * This function prints both stacks side by side. If one stack is shorter,
  * empty space is printed for missing elements.
  */
@@ -54,8 +55,8 @@ void	print_height(t_stacks *stack, int max_count, t_node *current_a)
 /**
  * print_stacks - Prints the current state of stack_a and stack_b.
  * @stack: Pointer to the t_stacks structure containing the stacks.
- * 
- * This function displays the elements in stack_a and stack_b in a 
+ *
+ * This function displays the elements in stack_a and stack_b in a
  * visually understandable format.
  */
 
@@ -77,14 +78,16 @@ void	print_stack(t_stacks *stack)
 }
 
 /**
- * check_visual - Checks if the '-v' flag is passed in the arguments and adjusts argc.
+ * check_visual -
+ * Checks if the '-v' flag is passed in the arguments and adjusts argc.
  * @argc: Pointer to the argument count (will be modified if '-v' is found).
  * @argv: Argument vector (array of strings).
  * @visual: Visual flag (0 by default, set to 1 if '-v' is found).
- * 
- * This function scans the arguments for the '-v' flag. If found, it removes the flag from argv,
+ *
+ * This function scans the arguments for the '-v' flag.
+ * If found, it removes the flag from argv,
  * adjusts argc, and sets visual to 1.
- * 
+ *
  * Return: 1 if '-v' flag is found, 0 otherwise.
  */
 

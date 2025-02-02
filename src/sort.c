@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 12:29:28 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 18:59:55 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:58:45 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * is_empty - Checks if a stack is empty.
  * @stack: Pointer to the stack to check.
- * 
+ *
  * Return: 1 if the stack is empty, otherwise 0.
  */
 
@@ -28,7 +28,7 @@ int	is_empty(t_node **stack)
  * find_position - Finds the position of a given number in the stack.
  * @stack: Pointer to the head of the stack.
  * @num: The number to find the position of.
- * 
+ *
  * Return: The position of num in the stack, or -1 if not found.
  */
 
@@ -52,7 +52,7 @@ int	find_position(t_node **stack, int num)
 /**
  * find_smallest - Finds the smallest number in the stack.
  * @stack: Pointer to the head of the stack.
- * 
+ *
  * Return: The smallest number in the stack.
  */
 
@@ -75,7 +75,7 @@ int	find_smallest(t_node **stack)
 /**
  * sort_three - Sorts three elements in stack_a.
  * @stack_a: Pointer to the head of stack_a.
- * 
+ *
  * This function sorts the top three elements in stack_a using simple rotations.
  */
 
@@ -108,11 +108,13 @@ void	sort_three(t_node **stack_a)
 }
 
 /**
- * sort_five - Sorts five elements in stack_a using stack_b as an auxiliary stack.
+ * sort_five -
+ * Sorts five elements in stack_a using stack_b as an auxiliary stack.
  * @stack_a: Pointer to the head of stack_a.
  * @stack_b: Pointer to the head of stack_b.
- * 
- * This function sorts the top five elements by moving the smallest elements to stack_b
+ *
+ * This function sorts the top five elements
+ * by moving the smallest elements to stack_b
  * and then sorting the remaining three in stack_a.
  */
 

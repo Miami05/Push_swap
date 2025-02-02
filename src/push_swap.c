@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 01:07:14 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 18:50:54 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/20 20:16:27 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,4 @@ int	main(int argc, char **argv)
 		clear_list(&stacks.stack_a);
 	check_duplicates_list(stacks.stack_a);
 	push_swap(&stacks);
-	clear_list(&stacks.stack_a);
-	clear_list(&stacks.stack_b);
 }

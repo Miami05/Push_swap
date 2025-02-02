@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ledio <ledio@student.42.fr>                +#+  +:+       +#+         #
+#    By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 20:52:11 by ledio             #+#    #+#              #
-#    Updated: 2024/10/08 21:33:45 by ledio            ###   ########.fr        #
+#    Updated: 2025/01/20 22:22:36 by ldurmish         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,14 +71,19 @@ clean:
 	@echo "$(RED)Cleaning object files...$(RESET)"
 	@rm -f $(OBJS) $(BONUS_OBJS)
 	@$(MAKE) -C $(LIBFT_DIR) clean
+	@echo "$(GREEN)Object files removed successfully...!$(RESET)"
 
 # Remove executables and object files
 fclean: clean
 	@echo "$(RED)Removing executables...$(RESET)"
 	@rm -f $(NAME) $(BONUS_NAME)
 	@$(MAKE) -C $(LIBFT_DIR) fclean
+	@echo "$(GREEN)Executables removed successfully...!$(RESET)"
 
 # Rebuild everything
 re: fclean all
+
+leaks: re
+	valgrind --leak-check=full ./push_swap
 
 .PHONY: all bonus clean fclean re

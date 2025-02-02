@@ -6,7 +6,7 @@
 /*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:44:43 by ledio             #+#    #+#             */
-/*   Updated: 2025/01/09 17:09:11 by ldurmish         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:54:42 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ void	error(int argc, char **argv)
  *
  * This function checks if the linked list (stack) is sorted in ascending order.
  * It iterates through the list, comparing each node's data with the next one.
- * If any node has a value greater than the next node, it returns `false`, meaning
+ * If any node has a value greater than the next node,
+ * it returns `false`, meaning
  * the list is not sorted. If the list is empty or sorted, it returns `true`.
  *
  * Return: `true` if the list is sorted or empty, `false` otherwise.

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ledio <ledio@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldurmish <ldurmish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:48:26 by ledio             #+#    #+#             */
-/*   Updated: 2024/10/08 19:05:37 by ledio            ###   ########.fr       */
+/*   Updated: 2025/01/14 21:49:22 by ldurmish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * check_duplicates_list - Checks for duplicates in a linked list.
  * @stack_a: Pointer to the head of the stack.
- * 
+ *
  * Return: true if duplicates are found, otherwise false.
  */
 
@@ -46,10 +46,10 @@ bool	check_duplicates_list(t_node *stack_a)
  * check_arguments - Validates the input arguments.
  * @argc: Argument count.
  * @argv: Argument vector (array of strings).
- * 
+ *
  * This function ensures that the arguments contain only valid integers.
  * If an invalid argument is found, it throws an error.
- * 
+ *
  * Return: 0 if arguments are valid, otherwise throws an error.
  */
 
@@ -82,7 +82,7 @@ int	check_arguments(int argc, char **argv)
 /**
  * ft_atol - Converts a string to a long integer.
  * @str: String to convert.
- * 
+ *
  * Return: The converted long integer.
  */
 
@@ -113,8 +113,9 @@ long	ft_atol(const char *str)
  * ft_strcmp - Compares two strings.
  * @s1: First string to compare.
  * @s2: Second string to compare.
- * 
- * Return: The difference between the two strings at the first mismatched character.
+ *
+ * Return: The difference between the two strings
+ * at the first mismatched character.
  */
 
 int	ft_strcmp(const char *s1, const char *s2)
@@ -130,7 +131,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 /**
  * len_of_stack - Returns the length of a linked list stack.
  * @stack: Pointer to the stack.
- * 
+ *
  * Return: The number of elements in the stack.
  */
 
